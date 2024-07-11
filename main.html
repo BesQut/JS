@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href = "Function.js"></link> -->
+    <title>Document</title>
+</head>
+<body>
+    <h1>MySelf</h1>
+    <p id = "demo"></p>
+    <script>
+        function Person(fist, last, age, gender) {
+            this.fistName = fist;
+            this.lastName = last;
+            this.age = age;
+            this.gender = gender;
+            this.fullName = function(){
+                return this.fistName + " " + this.lastName;
+            };
+        };
+
+        const mySelf = new Person("Ivan","Sitnikov", 21,"Man");
+
+        document.getElementById("demo").innerHTML = "Мои данные " + mySelf.fullName();
+    </script>
+    <a href=""></a>
+</body>
+</html>
