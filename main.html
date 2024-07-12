@@ -69,6 +69,19 @@
         document.getElementById("demo3").innerHTML = index;
     </script>
 
+    <p id="demo4"></p>
+    <script>
+        let text13 = "Привет как дела, что сегодня делал?";
+        let index2 = text13.match(/ел/g);
+        document.getElementById("demo4").innerHTML = index2.length + " " + index2;
+    </script>
+
+    <p id="demo5"></p>
+    <script>
+        let text14 = "Привет как дела, что сегодня делал?";
+        let index3 = text13.includes("дела");
+        document.getElementById("demo5").innerHTML = index3;
+    </script>
 
 </body>
 </html>
