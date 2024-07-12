@@ -30,13 +30,13 @@
         // console.log(array3);
         let text1 = "Hello";
         let text2 = "World!" 
-        let text3 = text1.concat(" ", text2);
+        let text3 = text1.concat(" ", text2); //Соединяет два массива(текста)
         console.log(text3);
     </script>
 
     <script>
         let text4 = "         HI    ";
-        let text5 = text4.trim();
+        let text5 = text4.trim(); //Удоляет пробелы
         console.log(text5);
     </script>
 
@@ -50,8 +50,8 @@
 
     <script>
         let numb = 5;
-        let text9 = numb.toString();
-        let text10 = text9.repeat(3);
+        let text9 = numb.toString(); //Переводт в строку
+        let text10 = text9.repeat(3); //Повторяет 3 раза число 5
         console.log(text10);
     </script>
 
@@ -65,22 +65,30 @@
     <p id="demo3"></p>
     <script>
         let text12 = "Привет как дела, что сегодня делал?";
-        let index = text12.indexOf("ckj");
+        let index = text12.indexOf("ckj"); //Выводит индекс схожево значения в массиве(текста)
         document.getElementById("demo3").innerHTML = index;
     </script>
 
     <p id="demo4"></p>
     <script>
         let text13 = "Привет как дела, что сегодня делал?";
-        let index2 = text13.match(/ел/g);
+        let index2 = text13.match(/ел/g); //выводит схожие по значению в массиве(текста)
         document.getElementById("demo4").innerHTML = index2.length + " " + index2;
     </script>
 
     <p id="demo5"></p>
     <script>
         let text14 = "Привет как дела, что сегодня делал?";
-        let index3 = text13.includes("дела");
+        let index3 = text14.includes("дела"); //Если такое значение в массиве(текста)
         document.getElementById("demo5").innerHTML = index3;
+    </script>
+
+    <p id="demo6"></p>
+    <script>
+        let text15 = "Привет как дела, что сегодня делал?";
+        let index4 = text15.startsWith("как"); //Совпадает ли значение с началом массива(текста)
+        let index5 = text15.endsWith("?"); //Совпадает ли значение с концом массива(текста)
+        document.getElementById("demo6").innerHTML = index4 + " " + index5;
     </script>
 
 </body>
