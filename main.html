@@ -2,26 +2,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link href = "Function.js"></link> -->
+    <script src="./Function.js"></script>
     <title>Document</title>
 </head>
 <body>
     <h1>MySelf</h1>
     <p id = "demo1"></p>
     <script>
-        function Person(fist, last, age, gender) {
-            this.fistName = fist;
-            this.lastName = last;
-            this.age = age;
-            this.gender = gender;
-            this.fullName = function(){
-                return this.fistName + " " + this.lastName;
-            };
-        };
+        // function Person(fist, last, age, gender) {
+        //     this.fistName = fist;
+        //     this.lastName = last;
+        //     this.age = age;
+        //     this.gender = gender;
+        //     this.fullName = function(){
+        //         return this.fistName + " " + this.lastName;
+        //     };
+        // };
 
-        const mySelf = new Person("Ivan","Sitnikov", 21,"Man");
+        // const mySelf = new Person("Ivan","Sitnikov", 21,"Man");
 
-        document.getElementById("demo1").innerHTML = "Мои данные\n- имя и фамилия" + mySelf.fullName();
+        // document.getElementById("demo1").innerHTML = "Мои данные\n- имя и фамилия" + mySelf.fullName();
     </script>
 
     <script>
@@ -93,10 +93,30 @@
 
     <p id = "demo7"></p>
     <script>
-        document.getElementById("demo7").innerHTML = Number.isSafeInteger((Math.pow(2,53)-1));
+        document.getElementById("demo7").innerHTML = Number.isSafeInteger((Math.pow(2,53)-1)); //ПРоверяет на безопасное число
         console.log(Math.pow(2,53)-1);
         console.log(Number.isInteger(3.2))
     </script>
+
+    <p id = "demo8"></p>
+    <script>
+        let x = 123.23;
+        let y = 123;
+        let z = x.toFixed(0); //Указывает количество знаков после запятой
+        console.log(typeof z);
+        if (x.toFixed(0) === y) {
+            console.log(true);
+        }
+        else {
+            console.log(false);
+        }
+    </script>
+
+
+
+
+
+
 
 </body>
 </html>
