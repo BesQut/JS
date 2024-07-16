@@ -5,23 +5,23 @@
     <!-- <script src="./Function.js"></script> -->
     <title>Document</title>
 </head>
-<body>
+<>
     <h1>MySelf</h1>
     <p id = "demo1"></p>
     <script>
-        // function Person(fist, last, age, gender) {
-        //     this.fistName = fist;
-        //     this.lastName = last;
-        //     this.age = age;
-        //     this.gender = gender;
-        //     this.fullName = function(){
-        //         return this.fistName + " " + this.lastName;
-        //     };
-        // };
+        function Person(fist, last, age, gender) {
+            this.fistName = fist;
+            this.lastName = last;
+            this.age = age;
+            this.gender = gender;
+            this.fullName = function(){
+                return this.fistName + " " + this.lastName;
+            };
+        };
 
-        // const mySelf = new Person("Ivan","Sitnikov", 21,"Man");
+        const mySelf = new Person("Ivan","Sitnikov", 21,"Man");
 
-        // document.getElementById("demo1").innerHTML = "Мои данные\n- имя и фамилия" + mySelf.fullName();
+        document.getElementById("demo1").innerHTML = "Мои данные\n- имя и фамилия" + mySelf.fullName();
     </script>
 
     <script>
@@ -58,15 +58,17 @@
     <p id = "demo2"></p>
     <script>
         let text11 = "Сегодня хороший день";
-        let newtext = text11.split(",");
+        let newtext = text11.split(" ");
         document.getElementById("demo2").innerHTML = newtext;
     </script>
 
     <p id="demo3"></p>
+    <p id="demo10"></p>
     <script>
         let text12 = "Привет как дела, что сегодня делал?";
         let index = text12.indexOf("ckj"); //Выводит индекс схожево значения в массиве(текста)
-        document.getElementById("demo3").innerHTML = index;
+        document.getElementById("demo3").innerHTML = "Номер = " + text12.search("как");
+        document.getElementById("demo10").innerHTML = "Индакс = " + index;
     </script>
 
     <p id="demo4"></p>
@@ -80,7 +82,9 @@
     <script>
         let text14 = "Привет как дела, что сегодня делал?";
         let index3 = text14.includes("дела"); //Если такое значение в массиве(текста)
+        console.log(text14.replace("как", " "));
         document.getElementById("demo5").innerHTML = index3;
+
     </script>
 
     <p id="demo6"></p>
@@ -113,7 +117,6 @@
     </script>
 
     <p id="demo9"></p>
-    <p id="demo10"></p>
     <script>
         const array_numbers = [1, 3, 5, 2, 3, 1, 4];
         const elements_array = [];
@@ -125,7 +128,7 @@
         function elements(value, index){
             if (array_numbers[index] < array_numbers[index + 1] && array_numbers[index] != array_numbers[array_numbers.length - 1]){
                 console.log("a[" + index + "] = " + value);
-                elements_array.push(value);
+                elements_array.push(value);//Добаволяет элемент в конец массива
             }
             else {
                 elements_array2.push(value);
@@ -133,6 +136,19 @@
         }
     </script>
 
+    <script>
+        const nb = [1, 2, 3, 4, 5];
+        console.log(nb.slice(2));
+    </script>
+
+    <script>
+        const nb_ar = [1, 2, 3, 4, 5];
+        let set = 1;
+        console.log(Array.isArray(nb_ar));
+        console.log(Array.isArray(set));
+        console.log(nb_ar instanceof Array);
+        console.log(set instanceof Array);
+    </script>
 
 </body>
 </html>
