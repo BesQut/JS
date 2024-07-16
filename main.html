@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./Function.js"></script>
+    <!-- <script src="./Function.js"></script> -->
     <title>Document</title>
 </head>
 <body>
@@ -112,11 +112,19 @@
         }
     </script>
 
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <script>
+        const array_numbers = [1, 3, 5, 2, 3, 1, 4];
+        document.getElementById("demo9").innerHTML = "Длинная массива = " + array_numbers.length;
+        array_numbers.forEach(elements);
+        function elements(value, index){
+            if (array_numbers[index] < array_numbers[index + 1] && array_numbers[index] != array_numbers[array_numbers.length - 1]){
+                console.log("a[" + index + "] = " + value); 
+            }
+        }
+    </script>
 
-
-
-
-
-
+    
 </body>
 </html>
