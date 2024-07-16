@@ -116,15 +116,23 @@
     <p id="demo10"></p>
     <script>
         const array_numbers = [1, 3, 5, 2, 3, 1, 4];
+        const elements_array = [];
+        const elements_array2 = [];
         document.getElementById("demo9").innerHTML = "Длинная массива = " + array_numbers.length;
         array_numbers.forEach(elements);
+        console.log(elements_array);
+        console.log(elements_array2);
         function elements(value, index){
             if (array_numbers[index] < array_numbers[index + 1] && array_numbers[index] != array_numbers[array_numbers.length - 1]){
-                console.log("a[" + index + "] = " + value); 
+                console.log("a[" + index + "] = " + value);
+                elements_array.push(value);
+            }
+            else {
+                elements_array2.push(value);
             }
         }
     </script>
 
-    
+
 </body>
 </html>
